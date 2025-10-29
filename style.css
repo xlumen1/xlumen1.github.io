@@ -28,14 +28,8 @@ body {
 	font-style: normal;
 }
 
-.center-x {
+.center {
   margin: 0 auto;
+  width: fit-content;
 }
 
-.center-y {
-  margin: auto 0;
-}
-
-.center-xy {
-  margin: auto auto;
-}
