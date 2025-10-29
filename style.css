@@ -1,0 +1,14 @@
+::root {
+  --primary-1: oklch(0.7344 0.1235 165);
+  --primary-2: oklch(0.7344 0.1235 255);
+  --accent-1:  oklch(0.7344 0.1235 345);
+  --accent-2:  oklch(0.7344 0.1235 75);
+  --primary-1-dark: oklch(0.2 0.005 165);
+  --primary-2-dark: oklch(0.2 0.005 255);
+  --accent-1-dark:  oklch(0.2 0.005 345);
+  --accent-2-dark:  oklch(0.2 0.005 75);
+}
+
+body {
+  background-color: var(--accent-2-dark);
+}
