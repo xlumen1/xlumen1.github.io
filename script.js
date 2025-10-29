@@ -4,6 +4,7 @@ var R_CanvasResize = (_e) => {
   cnv.height = window.innerHeight;
 };
 
-document.addEventListener("load", R_CanvasResize);
-document.addEventListener("resize", R_CanvasResize);
+R_CanvasResize();
+window.addEventListener("resize", R_CanvasResize);
+
 
