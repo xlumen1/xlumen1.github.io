@@ -1,4 +1,4 @@
-::root {
+:root {
   --primary-1: oklch(0.7344 0.1235 165);
   --primary-2: oklch(0.7344 0.1235 255);
   --accent-1:  oklch(0.7344 0.1235 345);
