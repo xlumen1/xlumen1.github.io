@@ -13,3 +13,29 @@ body {
   background-color: var(--accent-2-dark);
   color: #fafafa;
 }
+
+.font-reg {
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-bold {
+	font-family: "Schibsted Grotesk", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.center-x {
+  margin: 0 auto;
+}
+
+.center-y {
+  margin: auto 0;
+}
+
+.center-xy {
+  margin: auto auto;
+}
