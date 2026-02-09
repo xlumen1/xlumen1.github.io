@@ -7,7 +7,6 @@ var D_Canvas_Stardata = {
 // mouse state (normalized 0..1)
 const D_Canvas_Mouse = { x: 0.5, y: 0.5, active: false };
 
-// influence settings (tweakable)
 const D_Canvas_InfluenceRadius = 0.06; // small radius (fraction of canvas)
 const D_Canvas_TurnStrength = 0.12; // how fast stars turn toward mouse
 const D_Canvas_FalloffPower = 2; // smooth falloff exponent
@@ -44,7 +43,6 @@ const F_CanvasFrame = () => {
     star.x += star.vx;
     star.y += star.vy;
 
-    // wrap around edges
     if (star.x < 0) star.x += 1;
     else if (star.x > 1) star.x -= 1;
     if (star.y < 0) star.y += 1;

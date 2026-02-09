@@ -1,18 +1,117 @@
 :root {
-  --primary-1: oklch(0.7344 0.1235 165);
-  --primary-2: oklch(0.7344 0.1235 255);
-  --accent-1:  oklch(0.7344 0.1235 345);
-  --accent-2:  oklch(0.7344 0.1235 75);
+  --primary-1:  oklch(0.7344 0.1235 165);
+  --primary-2:  oklch(0.7344 0.1235 255);
+  --accent-1:   oklch(0.7344 0.1235 345);
+  --accent-2:   oklch(0.7344 0.1235 075);
   --primary-1-dark: oklch(0.2 0.005 165);
   --primary-2-dark: oklch(0.2 0.005 255);
   --accent-1-dark:  oklch(0.2 0.005 345);
-  --accent-2-dark:  oklch(0.2 0.005 75);
+  --accent-2-dark:  oklch(0.2 0.005 075);
+  --hi-white: #fafafa;
+  --hi-black: #222;
 }
 
-body {
-  background-color: var(--accent-2-dark);
-  color: #fafafa;
+/* color styles */
+.color-hw {
+  color: var(--hi-white);
 }
+
+.color-hb {
+  color: var(--hi-black);
+}
+
+.back-p1 {
+  background-color: var(--primary-1);
+}
+
+
+.back-p2 {
+  background-color: var(--primary-2);
+}
+
+
+.back-a1 {
+  background-color: var(--accent-1);
+}
+
+
+.back-a2 {
+  background-color: var(--accent-2);
+}
+
+
+.back-p1d {
+  background-color: var(--primary-1-dark);
+}
+
+
+.back-p2d {
+  background-color: var(--primary-2-dark);
+}
+
+
+.back-a1d {
+  background-color: var(--accent-1-dark);
+}
+
+.back-a2d {
+  background-color: var(--accent-2-dark);
+}
+
+.border-p1 {
+  border-color: var(--primary-1);
+}
+
+
+.border-p2 {
+  border-color: var(--primary-2);
+}
+
+
+.border-a1 {
+  border-color: var(--accent-1);
+}
+
+
+.border-a2 {
+  border-color: var(--accent-2);
+}
+
+
+.border-p1d {
+  border-color: var(--primary-1-dark);
+}
+
+
+.border-p2d {
+  border-color: var(--primary-2-dark);
+}
+
+
+.border-a1d {
+  border-color: var(--accent-1-dark);
+}
+
+.border-a2d {
+  border-color: var(--accent-2-dark);
+}
+
+.border-thin {
+  border: solid;
+  border-width: 2px;
+}
+
+.border-normal {
+  border: solid;
+  border-width: 3px;
+}
+
+.border-thick {
+  border: solid;
+  border-width: 4px;
+}
+
+/* font classes */
 
 .font-reg {
   font-family: "Schibsted Grotesk", sans-serif;
@@ -22,14 +121,23 @@ body {
 }
 
 .font-bold {
-	font-family: "Schibsted Grotesk", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 700;
-	font-style: normal;
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
+
+/* justification classes */
 
 .center {
   margin: 0 auto;
   width: fit-content;
+}
+
+/* structural classes */
+div.card {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
 }
 
