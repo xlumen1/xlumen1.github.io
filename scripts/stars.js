@@ -64,8 +64,6 @@ const M_Initialize = (() => {
     });
   }
 
-  console.log(D_Canvas_Stardata.stars);
-
   setInterval(M_CanvasFrame, 1000 / D_Canvas_Framerate);
   
   return {
