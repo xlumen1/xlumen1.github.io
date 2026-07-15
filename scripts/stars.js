@@ -148,7 +148,7 @@ const M_CanvasFrame = () => {
     let p10 = U_VectorAverage([v01, v02, v11, v12]);
     let p11 = U_VectorAverage([v11, v12, v21, v22]);
 
-    fv = U_VectorLerp(
+    let fv = U_VectorLerp(
       U_VectorLerp(p00, p10, offset_x),
       U_VectorLerp(p01, p11, offset_x),
       offset_y
