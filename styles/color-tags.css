@@ -1,0 +1,44 @@
+.font-color-hw {
+  color: var(--color-white);
+}
+
+.font-color-hb {
+  color: var(--color-black);
+}
+
+.back-p1 {
+  background-color: var(--color-primary-1);
+}
+
+.back-p2 {
+  background-color: var(--color-primary-2);
+}
+
+
+.back-a1 {
+  background-color: var(--color-accent-1);
+}
+
+
+.back-a2 {
+  background-color: var(--color-accent-2);
+}
+
+
+.back-p1d {
+  background-color: var(--color-primary-1-dark);
+}
+
+
+.back-p2d {
+  background-color: var(--color-primary-2-dark);
+}
+
+
+.back-a1d {
+  background-color: var(--color-accent-1-dark);
+}
+
+.back-a2d {
+  background-color: var(--color-accent-2-dark);
+}

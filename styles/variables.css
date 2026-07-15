@@ -1,0 +1,22 @@
+:root {
+    /* Color vars */
+  --color-primary-1:  oklch(0.7344 0.1235 165);
+  --color-primary-2:  oklch(0.7344 0.1235 255);
+  --color-accent-1:   oklch(0.7344 0.1235 345);
+  --color-accent-2:   oklch(0.7344 0.1235 075);
+  --color-primary-1-dark: oklch(0.5 0.05 165);
+  --color-primary-2-dark: oklch(0.5 0.05 255);
+  --color-accent-1-dark:  oklch(0.5 0.05 345);
+  --color-accent-2-dark:  oklch(0.5 0.05 075);
+  --color-primary-1-black: oklch(0.2 0.005 165);
+  --color-primary-2-black: oklch(0.2 0.005 255);
+  --color-accent-1-black:  oklch(0.2 0.005 345);
+  --color-accent-2-black:  oklch(0.2 0.005 075);
+  --color-white: #fafafa;
+  --color-black: #222;
+
+  /* Font vars */
+  --font-primary-family: "Schibsted Grotesk";
+  --font-primary-weight-normal: 400;
+  --font-primary-weight-bold: 700;
+}
