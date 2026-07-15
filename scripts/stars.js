@@ -133,20 +133,20 @@ const M_CanvasFrame = () => {
 
     // Origin is TR
 
-    v00 = D_Fluid.getVelocity(cell_x-1, cell_y-1);
-    v01 = D_Fluid.getVelocity(cell_x-1, cell_y+0);
-    v02 = D_Fluid.getVelocity(cell_x-1, cell_y+1);
-    v10 = D_Fluid.getVelocity(cell_x+0, cell_y-1);
-    v11 = D_Fluid.getVelocity(cell_x+0, cell_y+0);
-    v12 = D_Fluid.getVelocity(cell_x+0, cell_y+1);
-    v20 = D_Fluid.getVelocity(cell_x+1, cell_y-1);
-    v21 = D_Fluid.getVelocity(cell_x+1, cell_y+0);
-    v22 = D_Fluid.getVelocity(cell_x+1, cell_y+1);
+    let v00 = D_Fluid.getVelocity(cell_x-1, cell_y-1);
+    let v01 = D_Fluid.getVelocity(cell_x-1, cell_y+0);
+    let v02 = D_Fluid.getVelocity(cell_x-1, cell_y+1);
+    let v10 = D_Fluid.getVelocity(cell_x+0, cell_y-1);
+    let v11 = D_Fluid.getVelocity(cell_x+0, cell_y+0);
+    let v12 = D_Fluid.getVelocity(cell_x+0, cell_y+1);
+    let v20 = D_Fluid.getVelocity(cell_x+1, cell_y-1);
+    let v21 = D_Fluid.getVelocity(cell_x+1, cell_y+0);
+    let v22 = D_Fluid.getVelocity(cell_x+1, cell_y+1);
     
-    p00 = U_VectorAverage([v00, v01, v10, v11]);
-    p01 = U_VectorAverage([v10, v11, v20, v21]);
-    p10 = U_VectorAverage([v01, v02, v11, v12]);
-    p11 = U_VectorAverage([v11, v12, v21, v22]);
+    let p00 = U_VectorAverage([v00, v01, v10, v11]);
+    let p01 = U_VectorAverage([v10, v11, v20, v21]);
+    let p10 = U_VectorAverage([v01, v02, v11, v12]);
+    let p11 = U_VectorAverage([v11, v12, v21, v22]);
 
     fv = U_VectorLerp(
       U_VectorLerp(p00, p10, offset_x),
