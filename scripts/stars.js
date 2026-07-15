@@ -10,6 +10,34 @@ function U_Lerp(a, b, t) {
   return a + (b - a) * t;
 }
 
+
+function U_VectorLerp(a, b, t) {
+  return {
+    x: U_Lerp(a.x, b.x, t),
+    y: U_Lerp(a.y, b.y, t)
+  };
+}
+
+function U_Average(p) {
+  let o = 0;
+  p.forEach(value => {
+    o += value;
+  });
+  return o / p.length;
+}
+
+function U_VectorAverage(v) {
+  let x = [];
+  let y = [];
+
+  v.forEach(vec => {
+    x.push(vec.x);
+    y.push(vec.y);
+  });
+
+  return {x: U_Average(x), y: U_Average(y)};
+}
+
 var D_Canvas_Stardata = {
   star_radius: 2,
   stars: [],
@@ -100,31 +128,34 @@ const M_CanvasFrame = () => {
     let cell_x = Math.floor(star.x * D_Fluid.width());
     let cell_y = Math.floor(star.y * D_Fluid.height());
 
-    let norm_offset_x = 2 * (star.x * D_Fluid.width() - cell_x - 0.5);
-    let norm_offset_y = 2 * (star.y * D_Fluid.height() - cell_y - 0.5);
-    let abs_offset_x = Math.abs(norm_offset_x);
-    let abs_offset_y = Math.abs(norm_offset_y);
+    let offset_x = star.x * D_Fluid.width() - cell_x;
+    let offset_y = star.y * D_Fluid.height() - cell_y;
 
-    let dir_x = Math.sign(norm_offset_x);
-    let dir_y = Math.sign(norm_offset_y);
+    // Origin is TR
 
-    let vx00 = D_Fluid.getXVelocity(cell_x, cell_y);
-    let vy00 = D_Fluid.getYVelocity(cell_x, cell_y);
-    let vx10 = D_Fluid.getXVelocity(cell_x + dir_x, cell_y);
-    let vy10 = D_Fluid.getYVelocity(cell_x + dir_x, cell_y);
-    let vx01 = D_Fluid.getXVelocity(cell_x, cell_y + dir_y);
-    let vy01 = D_Fluid.getYVelocity(cell_x, cell_y + dir_y);
+    v00 = D_Fluid.getVelocity(cell_x-1, cell_y-1);
+    v01 = D_Fluid.getVelocity(cell_x-1, cell_y+0);
+    v02 = D_Fluid.getVelocity(cell_x-1, cell_y+1);
+    v10 = D_Fluid.getVelocity(cell_x+0, cell_y-1);
+    v11 = D_Fluid.getVelocity(cell_x+0, cell_y+0);
+    v12 = D_Fluid.getVelocity(cell_x+0, cell_y+1);
+    v20 = D_Fluid.getVelocity(cell_x+1, cell_y-1);
+    v21 = D_Fluid.getVelocity(cell_x+1, cell_y+0);
+    v22 = D_Fluid.getVelocity(cell_x+1, cell_y+1);
+    
+    p00 = U_VectorAverage([v00, v01, v10, v11]);
+    p01 = U_VectorAverage([v10, v11, v20, v21]);
+    p10 = U_VectorAverage([v01, v02, v11, v12]);
+    p11 = U_VectorAverage([v11, v12, v21, v22]);
 
-    let vx0 = U_Lerp(vx00, vx10, abs_offset_x);
-    let vy0 = U_Lerp(vy00, vy10, abs_offset_x);
-    let vx1 = U_Lerp(vx00, vx01, abs_offset_y);
-    let vy1 = U_Lerp(vy00, vy01, abs_offset_y);
+    fv = U_VectorLerp(
+      U_VectorLerp(p00, p10, offset_x),
+      U_VectorLerp(p01, p11, offset_x),
+      offset_y
+    );
 
-    let vx = U_Lerp(vx0, vx1, 0.5);
-    let vy = U_Lerp(vy0, vy1, 0.5);
-
-    star.vx = U_MoveToward(star.vx, vx, 0.2 / star.r);
-    star.vy = U_MoveToward(star.vy, vy, 0.2 / star.r);
+    star.vx = U_MoveToward(star.vx, fv.x, 0.2 / star.r);
+    star.vy = U_MoveToward(star.vy, fv.y, 0.2 / star.r);
 
     // Update position based on velocity
     star.x += star.vx;
