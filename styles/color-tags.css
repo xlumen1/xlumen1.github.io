@@ -42,3 +42,21 @@
 .back-a2d {
   background-color: var(--color-accent-2-dark);
 }
+
+.back-p1b {
+  background-color: var(--color-primary-1-black);
+}
+
+
+.back-p2b {
+  background-color: var(--color-primary-2-black);
+}
+
+
+.back-a1b {
+  background-color: var(--color-accent-1-black);
+}
+
+.back-a2b {
+  background-color: var(--color-accent-2-black);
+}
