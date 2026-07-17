@@ -61,6 +61,7 @@ const M_Initialize = (() => {
       vx: 0,
       vy: 0,
       r: 1 + Math.random() * D_Canvas_Stardata.star_radius,
+      shade: Math.random()
     });
   }
 
@@ -118,7 +119,6 @@ const M_CanvasFrame = () => {
   let ctx = cnv.getContext("2d");
   ctx.fillStyle = "oklch(0.2 0.005 75)";
   ctx.fillRect(0, 0, cnv.width, cnv.height);
-  ctx.fillStyle = "#FFFFFF";
   for (const star of D_Canvas_Stardata.stars) {
 
     // Update star velocity based on fluid field
@@ -152,8 +152,8 @@ const M_CanvasFrame = () => {
       offset_y
     );
 
-    star.vx = U_MoveToward(star.vx, fv.x, 0.2 / star.r);
-    star.vy = U_MoveToward(star.vy, fv.y, 0.2 / star.r);
+    star.vx = U_MoveToward(star.vx, fv.x, 0.01 / star.r);
+    star.vy = U_MoveToward(star.vy, fv.y, 0.01 / star.r);
 
     // Update position based on velocity
     star.x += star.vx;
@@ -169,6 +169,7 @@ const M_CanvasFrame = () => {
 
     const speed = Math.sqrt(star.vx**2, star.vy**2);
 
+    ctx.fillStyle = `rgb(${U_Lerp(0xAA, 0xFF, star.shade)}, ${U_Lerp(0xAA, 0xFF, star.shade)}, ${U_Lerp(0xCC, 0xFF, star.shade)})`;
     ctx.beginPath();
     ctx.ellipse(px, py, star.r*(speed*500+1), star.r/(speed*20+1), Math.atan2(star.vy, star.vx), 0, 2 * Math.PI);
     ctx.fill();
