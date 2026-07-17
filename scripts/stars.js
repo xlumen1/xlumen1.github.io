@@ -41,7 +41,7 @@ function U_VectorAverage(v) {
 var D_Canvas_Stardata = {
   star_radius: 2,
   stars: [],
-  count: 120,
+  count: 5000,
 };
 
 // mouse state (normalized 0..1)
