@@ -16,3 +16,9 @@ div.card {
   height: fit-content;
   border-radius: 5px;
 }
+
+/* General Properties */
+.passthrough {
+  user-select: none;
+  pointer-events: none;
+}

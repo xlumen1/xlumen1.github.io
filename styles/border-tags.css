@@ -50,3 +50,145 @@
   border: solid;
   border-width: 4px;
 }
+
+/* Text shadows */
+
+.text-shadow-black {
+  text-shadow: 
+    -1px -1px 0 var(--color-black),
+    -2px -2px 0 var(--color-black),
+    1px 1px 0 var(--color-black),
+    2px 2px 0 var(--color-black),
+    3px 3px 0 var(--color-black),
+    4px 4px 0 var(--color-black);
+}
+
+.text-shadow-white {
+  text-shadow: 
+    -1px -1px 0 var(--color-white),
+    -2px -2px 0 var(--color-white),
+    1px 1px 0 var(--color-white),
+    2px 2px 0 var(--color-white),
+    3px 3px 0 var(--color-white),
+    4px 4px 0 var(--color-white);
+}
+
+.text-shadow-p1 {
+  text-shadow: 
+    -1px -1px 0 var(--color-primary-1),
+    -2px -2px 0 var(--color-primary-1),
+    1px 1px 0 var(--color-primary-1),
+    2px 2px 0 var(--color-primary-1),
+    3px 3px 0 var(--color-primary-1),
+    4px 4px 0 var(--color-primary-1);
+}
+
+.text-shadow-p2 {
+  text-shadow: 
+    -1px -1px 0 var(--color-primary-2),
+    -2px -2px 0 var(--color-primary-2),
+    1px 1px 0 var(--color-primary-2),
+    2px 2px 0 var(--color-primary-2),
+    3px 3px 0 var(--color-primary-2),
+    4px 4px 0 var(--color-primary-2);
+}
+
+.text-shadow-a1 {
+  text-shadow: 
+    -1px -1px 0 var(--color-accent-1),
+    -2px -2px 0 var(--color-accent-1),
+    1px 1px 0 var(--color-accent-1),
+    2px 2px 0 var(--color-accent-1),
+    3px 3px 0 var(--color-accent-1),
+    4px 4px 0 var(--color-accent-1);
+}
+
+.text-shadow-a2 {
+  text-shadow: 
+    -1px -1px 0 var(--color-accent-2),
+    -2px -2px 0 var(--color-accent-2),
+    1px 1px 0 var(--color-accent-2),
+    2px 2px 0 var(--color-accent-2),
+    3px 3px 0 var(--color-accent-2),
+    4px 4px 0 var(--color-accent-2);
+}
+
+.text-shadow-p1d {
+  text-shadow: 
+    -1px -1px 0 var(--color-primary-1-dark),
+    -2px -2px 0 var(--color-primary-1-dark),
+    1px 1px 0 var(--color-primary-1-dark),
+    2px 2px 0 var(--color-primary-1-dark),
+    3px 3px 0 var(--color-primary-1-dark),
+    4px 4px 0 var(--color-primary-1-dark);
+}
+
+.text-shadow-p2d {
+  text-shadow: 
+    -1px -1px 0 var(--color-primary-2-dark),
+    -2px -2px 0 var(--color-primary-2-dark),
+    1px 1px 0 var(--color-primary-2-dark),
+    2px 2px 0 var(--color-primary-2-dark),
+    3px 3px 0 var(--color-primary-2-dark),
+    4px 4px 0 var(--color-primary-2-dark);
+}
+
+.text-shadow-a1d {
+  text-shadow: 
+    -1px -1px 0 var(--color-accent-1-dark),
+    -2px -2px 0 var(--color-accent-1-dark),
+    1px 1px 0 var(--color-accent-1-dark),
+    2px 2px 0 var(--color-accent-1-dark),
+    3px 3px 0 var(--color-accent-1-dark),
+    4px 4px 0 var(--color-accent-1-dark);
+}
+
+.text-shadow-a2d {
+  text-shadow: 
+    -1px -1px 0 var(--color-accent-2-dark),
+    -2px -2px 0 var(--color-accent-2-dark),
+    1px 1px 0 var(--color-accent-2-dark),
+    2px 2px 0 var(--color-accent-2-dark),
+    3px 3px 0 var(--color-accent-2-dark),
+    4px 4px 0 var(--color-accent-2-dark);
+}
+
+.text-shadow-p1b {
+  text-shadow: 
+    -1px -1px 0 var(--color-primary-1-black),
+    -2px -2px 0 var(--color-primary-1-black),
+    1px 1px 0 var(--color-primary-1-black),
+    2px 2px 0 var(--color-primary-1-black),
+    3px 3px 0 var(--color-primary-1-black),
+    4px 4px 0 var(--color-primary-1-black);
+}
+
+.text-shadow-p2b {
+  text-shadow: 
+    -1px -1px 0 var(--color-primary-2-black),
+    -2px -2px 0 var(--color-primary-2-black),
+    1px 1px 0 var(--color-primary-2-black),
+    2px 2px 0 var(--color-primary-2-black),
+    3px 3px 0 var(--color-primary-2-black),
+    4px 4px 0 var(--color-primary-2-black);
+}
+
+.text-shadow-a1b {
+  text-shadow: 
+    -1px -1px 0 var(--color-accent-1-black),
+    -2px -2px 0 var(--color-accent-1-black),
+    1px 1px 0 var(--color-accent-1-black),
+    2px 2px 0 var(--color-accent-1-black),
+    3px 3px 0 var(--color-accent-1-black),
+    4px 4px 0 var(--color-accent-1-black);
+}
+
+.text-shadow-a2b {
+  text-shadow: 
+    -1px -1px 0 var(--color-accent-2-black),
+    -2px -2px 0 var(--color-accent-2-black),
+    1px 1px 0 var(--color-accent-2-black),
+    2px 2px 0 var(--color-accent-2-black),
+    3px 3px 0 var(--color-accent-2-black),
+    4px 4px 0 var(--color-accent-2-black);
+}
