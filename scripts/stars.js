@@ -166,8 +166,11 @@ const M_CanvasFrame = () => {
 
     const px = star.x * cnv.width;
     const py = star.y * cnv.height;
+
+    const speed = Math.sqrt(star.vx**2, star.vy**2);
+
     ctx.beginPath();
-    ctx.arc(px, py, star.r, 0, 2 * Math.PI);
+    ctx.ellipse(px, py, star.r*(speed*500+1), star.r/(speed*20+1), Math.atan2(star.vy, star.vx), 0, 2 * Math.PI);
     ctx.fill();
   }
 };
