@@ -28,9 +28,9 @@
 /**
  * Modification:
  * Copyright (c) 2026 Gus Stoermer <https://xlumen1.github.io>
- * 
+ *
  * This file is derived from the original work and is licensed under the same terms as the original license above.
- * 
+ *
  * Modifications include:
  * -[/] Refactoring the code for better readability and maintainability.
  * -[ ] Adding comments and documentation to explain the functionality of the code.
@@ -38,7 +38,10 @@
  * -[X] Switching from using walls to toroidal wrapping for the fluid simulation.
  * -[ ] Adding rapidly adjustable and stable resolution control.
  * -[X] Exposing the fluid velocity field to the user interface for manipulation and visualization.
- * 
+ *
+ * Where an empty checkbox [ ] indicates a planned modification that has not yet been implemented,
+ * a slashed box [/] indicates a modification that has been partially implemented, and a checked box [X] indicates a modification that has been fully implemented.
+ *
  * The original license and copyright notice are retained to acknowledge the original author and the terms under which the software was released.
  */
 
